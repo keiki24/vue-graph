@@ -2,7 +2,7 @@ const MAX_DISP = 2
 
 Vue.component('graph-div', {
   props: ['grp'],
-  template: '<div class="graph-div"><p>{{ grp.name }}</p><button type="button" name="button" @click="removeButtonClicked">x</button></div>',
+  template: '<div class="graph-div"><p>{{ grp.index }}</p><button type="button" name="button" @click="removeButtonClicked">x</button></div>',
   methods: {
     removeButtonClicked: function () {
       this.$emit('remove', this)
@@ -24,10 +24,10 @@ var app = new Vue({
   el: '#app',
   data: {
     buttons: [
-      { name: 'buttonA' },
-      { name: 'buttonB' },
-      { name: 'buttonC' },
-      { name: 'buttonD' }
+      { name: 'buttonA', index: 'A' },
+      { name: 'buttonB', index: 'B' },
+      { name: 'buttonC', index: 'C' },
+      { name: 'buttonD', index: 'D' }
     ],
     divs: []
   },
