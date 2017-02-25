@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/main.css" type="text/css">
+    <title>vue graph</title>
+  </head>
+  <body>
+    <div id="app" class="container">
+      <nav>
+        <ul>
+          <nav-button v-for="button in buttons" :btn=button @call="buttonClick(button)"></nav-button>
+        </ul>
+      </nav>
+      <graph-div v-for="graph in divs" :grp=graph @remove="removeButtonClick(graph)"></graph-div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./node_modules/vue/dist/vue.min.js"></script>
+  <script type="text/javascript" src="./node_modules/lodash/lodash.js"></script>
+  <script type="text/javascript" src="./main.js"></script>
+</html>
